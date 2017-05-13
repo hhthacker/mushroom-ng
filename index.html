@@ -6,11 +6,30 @@
 	<link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="./styles/main.css" type="text/css">
 </head>
-<body>
+<body ng-app="MushroomApp">
 	<h1>hi cool world</h1>
-	<script src="./lib/bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
-	<script src="./lib/bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
-	<script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
-	<script src="javascripts/main.js" type="text/javascript"></script>
+
+
+
+    <div class="form-group" ng-controller="MushCtrl">
+    	<input type="radio" name="safety" value="poisonous">Poisonous</input>
+    	<input type="radio" name="safety" value="non-poisonous" checked >Non-Poisonous</input>
+    	<input type="text" placeholder="Search" ng-model="searchText"></input>
+    </div>
+
+<!--    <ul class="nav navbar-nav navbar-right" ng-repeat="thingy in navItems">
+                    <li><a href="#">{{thingy.name}}</a></li>
+                </ul> -->
+
+
+    <!-- Third party scripts -->
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="./lib/bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
+    <!-- Personal scripts -->
+    <script src="javascripts/app.js" type="text/javascript"></script>
+    <script src="javascripts/AppConstants.js" type="text/javascript"></script>
+    <script src="javascripts/main.js" type="text/javascript"></script>
 </body>
 </html>
