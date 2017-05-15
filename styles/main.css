@@ -11,3 +11,6 @@ body {
 
 p {
   color: #AAAAAA; }
+
+.jumbotron {
+  opacity: 0.8; }
