@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+</head>
+
+<body class="jumbotron" ng-app="MushroomApp">
+    <h1>hi cool world</h1>
+    <div class="form-group" ng-controller="MushCtrl">
+        <input type="radio" ng-model="edible" ng-value="false">Poisonous</input>
+        <input type="radio" ng-model="edible" ng-value="true" checked>Non-Poisonous</input>
+        <input type="text" placeholder="Search" ng-model="searchText"></input>
+        <div ng-repeat="shroom in mushrooms | filter: edible | filter: searchText">
+            <h1>{{shroom.name}}</h1>
+            <h3>{{shroom.description}}</h3>
+        </div>
+    </div>
+    <!-- Third party scripts -->
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="./lib/bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
+    <!-- Personal scripts -->
+    <script src="javascripts/app.js" type="text/javascript"></script>
+    <script src="javascripts/AppConstants.js" type="text/javascript"></script>
+    <script src="javascripts/main.js" type="text/javascript"></script>
+</body>
+
+</html>
